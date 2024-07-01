@@ -12,6 +12,7 @@
 		774A46932C333A2D00269908 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46922C333A2D00269908 /* ContentView.swift */; };
 		774A46952C333A2E00269908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774A46942C333A2E00269908 /* Assets.xcassets */; };
 		774A46982C333A2E00269908 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774A46972C333A2E00269908 /* Preview Assets.xcassets */; };
+		774A469F2C333B8600269908 /* swiftSux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A469E2C333B8600269908 /* swiftSux.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		774A46922C333A2D00269908 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		774A46942C333A2E00269908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		774A46972C333A2E00269908 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		774A469E2C333B8600269908 /* swiftSux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftSux.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				774A46902C333A2D00269908 /* yourForestRealApp.swift */,
 				14F72AB12C333B0800829FFF /* firspushprasiddha.swift */,
 				774A46922C333A2D00269908 /* ContentView.swift */,
+				774A469E2C333B8600269908 /* swiftSux.swift */,
 				774A46942C333A2E00269908 /* Assets.xcassets */,
 				774A46962C333A2E00269908 /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				774A46932C333A2D00269908 /* ContentView.swift in Sources */,
 				14F72AB22C333B0800829FFF /* firspushprasiddha.swift in Sources */,
+				774A469F2C333B8600269908 /* swiftSux.swift in Sources */,
 				774A46912C333A2D00269908 /* yourForestRealApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
