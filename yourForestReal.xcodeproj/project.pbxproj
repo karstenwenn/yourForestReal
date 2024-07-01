@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14F72AB22C333B0800829FFF /* firspushprasiddha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F72AB12C333B0800829FFF /* firspushprasiddha.swift */; };
 		774A46912C333A2D00269908 /* yourForestRealApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46902C333A2D00269908 /* yourForestRealApp.swift */; };
 		774A46932C333A2D00269908 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46922C333A2D00269908 /* ContentView.swift */; };
 		774A46952C333A2E00269908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774A46942C333A2E00269908 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14F72AB12C333B0800829FFF /* firspushprasiddha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firspushprasiddha.swift; sourceTree = "<group>"; };
 		774A468D2C333A2D00269908 /* yourForestReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yourForestReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		774A46902C333A2D00269908 /* yourForestRealApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourForestRealApp.swift; sourceTree = "<group>"; };
 		774A46922C333A2D00269908 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				774A46902C333A2D00269908 /* yourForestRealApp.swift */,
+				14F72AB12C333B0800829FFF /* firspushprasiddha.swift */,
 				774A46922C333A2D00269908 /* ContentView.swift */,
 				774A46942C333A2E00269908 /* Assets.xcassets */,
 				774A46962C333A2E00269908 /* Preview Content */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				774A46932C333A2D00269908 /* ContentView.swift in Sources */,
+				14F72AB22C333B0800829FFF /* firspushprasiddha.swift in Sources */,
 				774A46912C333A2D00269908 /* yourForestRealApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
