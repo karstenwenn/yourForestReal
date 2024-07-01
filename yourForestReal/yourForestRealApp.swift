@@ -1,17 +1,47 @@
+////
+////  yourForestRealApp.swift
+////  yourForestReal
+////
+////  Created by Karsten Wennerlund on 7/1/24.
+////
 //
-//  yourForestRealApp.swift
-//  yourForestReal
+//import SwiftUI
 //
-//  Created by Karsten Wennerlund on 7/1/24.
-//
+//@main
+//struct yourForestRealApp: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            ContentView()
+//        }
+//    }
+//}
 
 import SwiftUI
+import FirebaseCore
+//@main
+//struct yf_layoutApp: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            ContentViewForNavigation()
+//        }
+//    }
+//}
 
 @main
-struct yourForestRealApp: App {
+struct yf_layoutApp: App {
+    init() {
+        FirebaseApp.configure()
+    }
+    
+    @StateObject var viewModel = AuthViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(viewModel)
         }
     }
 }
+
+
+
+
