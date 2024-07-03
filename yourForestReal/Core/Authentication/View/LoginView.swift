@@ -5,14 +5,21 @@
 //  Created by Karsten Wennerlund on 6/25/24.
 //
 
+
+import FirebaseAuth
+import FirebaseCore
+import FirebaseFirestore
 import SwiftUI
 
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @State var rememberToggle = true
+    @State var isLoading = false
     
-    @EnvironmentObject var viewModel: AuthViewModel
+    @State var isSignedIn = false
+    
+   // @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         NavigationStack{
@@ -49,17 +56,68 @@ struct LoginView: View {
                 // sign in button
                 Button {
                     print("Log user in..")
-                    Task{
-                        try await viewModel.signIn(withEmail: email, password: password)
+//                    Task{
+//                        try await viewModel.signIn(withEmail: email, password: password)
+//                    }
+                    // new stuff
+                    isLoading = true
+                    Auth.auth().signIn(withEmail: email, password: password) {( result, error )
+                        in
+                        
+                        if error != nil {
+                            print(error?.localizedDescription ?? "")
+                            withAnimation{
+                                isLoading.toggle()
+                            }
+                        }
+                        else {
+                            //colect user information 
+                            isSignedIn = true
+                            Firestore.firestore()
+                                .collection("USERS")
+                                .document(result?.user.uid ?? "")
+                                .getDocument { (document, error) in
+                                
+                                if let document = document, document.exists {
+                                    let name = document.get("User_Name") as? String ?? ""
+                                    let email = document.get("Email") as? String ?? ""
+                                    // Now we store collected name and email from firestore to local storage
+                                    UserDefaults.standard.set(name, forKey: "NAME")
+                                    UserDefaults.standard.set(email, forKey: "EMAIL")
+                                    
+                                    isLoading.toggle()
+                                    
+                                }
+                                else{
+                                    isLoading.toggle()
+                                    print("document doesnt exist")
+                                }
+                                
+                            }
+                        }
                     }
+                    //end of new stuff
                 } label: {
-                    HStack {
-                        Text("Login")
-                            .fontWeight(.semibold)
-                        Image(systemName: "arrow.right")
+                    if isLoading {
+                        ProgressView()
+                            .foregroundColor(.white)
+                            .frame(width: UIScreen.main.bounds.width - 32, height: 48)
                     }
-                    .foregroundColor(.white)
-                    .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                    else{
+                        HStack {
+                            Text("Login")
+                                .fontWeight(.semibold)
+                            Image(systemName: "arrow.right")
+                                
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                        .navigationDestination(isPresented: $isSignedIn) {
+                            ProfileView()
+
+                        }
+                    }
+                    
                 }
                 .background(Color(.systemPurple))
                 

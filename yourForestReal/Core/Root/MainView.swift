@@ -5,26 +5,31 @@
 //  Created by Karsten Wennerlund on 6/25/24.
 //
 
-import SwiftUI
+//import SwiftUI
+//
+//struct MainView: View {
+//    @EnvironmentObject var viewModel: AuthViewModel
+//    
+//    var body: some View {
+//        Group {
+//            if viewModel.userSession != nil {
+//                ProfileView()
+//                //HomeView()
+//            } else {
+//                LoginView()
+//            }
+//        }
+//    }
+//}
+//
+//#Preview {
+//    MainView()
+//}
 
-struct MainView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
-    
-    var body: some View {
-        Group {
-            if viewModel.userSession != nil {
-                ProfileView()
-                //HomeView()
-            } else {
-                LoginView()
-            }
-        }
-    }
-}
 
-#Preview {
-    MainView()
-}
+
+
+
 
 //struct SheetView: View {
 //    @Environment(\.dismiss) var dismiss

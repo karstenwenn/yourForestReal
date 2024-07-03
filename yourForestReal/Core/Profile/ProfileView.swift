@@ -5,36 +5,44 @@
 //  Created by Karsten Wennerlund on 6/26/24.
 //
 
+
 import SwiftUI
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
 
 struct ProfileView: View {
+    @State private var isSignedIn = true
+    
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
-        if let user = viewModel.currentUser{
+        NavigationStack{
+            
+            // if let user = viewModel.currentUser{
             Form{
-                Section{
-                    HStack{
-                        Text(user.initials)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color(.white))
-                            .frame(width: 72, height: 72)
-                            .background(Color(.systemGray))
-                            .clipShape(Circle())
-                        VStack(alignment: .leading, spacing: 4){
-                            Text(user.fullname)
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                                .padding(.top, 4)
-                            
-                            Text(user.email)
-                                .font(.footnote)
-                                .accentColor(.gray)
-                            
-                        }
-                    }
-                }
+                //                Section{
+                //                    HStack{
+                //                        Text(user.initials)
+                //                            .font(.title)
+                //                            .fontWeight(.semibold)
+                //                            .foregroundStyle(Color(.white))
+                //                            .frame(width: 72, height: 72)
+                //                            .background(Color(.systemGray))
+                //                            .clipShape(Circle())
+                //                        VStack(alignment: .leading, spacing: 4){
+                //                            Text(user.fullname)
+                //                                .font(.subheadline)
+                //                                .fontWeight(.semibold)
+                //                                .padding(.top, 4)
+                //
+                //                            Text(user.email)
+                //                                .font(.footnote)
+                //                                .accentColor(.gray)
+                //
+                //                        }
+                //                    }
+                //                }
                 Section("General"){
                     HStack{
                         SettingsRowView(imageName: "gear",
@@ -52,12 +60,21 @@ struct ProfileView: View {
                 }
                 Section("Account"){
                     Button{
-                        //print("Sign out..")
-                        viewModel.signOut()
+                        print("Sign out..")
+                        do{
+                            try Auth.auth().signOut() //signs user out on backend
+                            isSignedIn = false
+                        } catch {
+                            print("DEBUG: Failed to sign out with error \(error.localizedDescription)")
+                        }
+                        
                     } label: {
                         SettingsRowView(imageName: "arrow.left.circle.fill",
                                         title: "Sign Out",
                                         tintColor: .red)
+                    }
+                    .navigationDestination(isPresented: $isSignedIn) {
+                        LoginView()
                     }
                     Button{
                         print("Delete account..")
@@ -68,6 +85,7 @@ struct ProfileView: View {
                     }
                 }
             }
+            //}
         }
     }
 }

@@ -6,14 +6,22 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
 
 struct RegistrationView: View {
     @State private var email = ""
     @State private var fullname = ""
     @State private var password = ""
     @State private var confirmPassword  = ""
+    
+    @State private var isLoading = false
+    @State var isSignedIn = false
+
+    
     @Environment(\.dismiss) var dismiss //useful for popping back to the oriignal screen via button below
-    @EnvironmentObject var viewModel: AuthViewModel
+    //@EnvironmentObject var viewModel: AuthViewModel
     
     
     var body: some View {
@@ -65,23 +73,60 @@ struct RegistrationView: View {
             
             Button {
                 print("Sign user up..")
-                Task{
-                    try await viewModel.createUser(withEmail: email,
-                                                   password: password,
-                                                   fullname: fullname)
+//                Task{
+//                    try await viewModel.createUser(withEmail: email,
+//                                                   password: password,
+//                                                   fullname: fullname)
+//                }
+                isLoading.toggle()
+                Auth.auth().createUser(withEmail: email, password: password) { ( result, error) in
+                    isLoading.toggle()
+                    
+                    if error != nil {
+                        print(error?.localizedDescription ?? "")
+                        withAnimation{
+                            isLoading.toggle()
+                        }
+                    }
+                    else {
+                        //colect user information
+                        let db = Firestore.firestore()
+                        let data: [String: Any] = ["Full Name": fullname, "Email": email]
+                        // Now we add same user name and email to local memory so we don't need to sync every
+                        
+                        UserDefaults.standard.setValue(result?.user.uid, forKey: "UID")
+                        // UID is unique key provided to user when they sign up to firestore database
+                        UserDefaults.standard.setValue(fullname, forKey: "NAME")
+                        
+                        UserDefaults.standard.setValue(email, forKey: "EMAIL")
+                        db.collection("USERS").addDocument(data: data)
+                        isLoading.toggle()
+                        isSignedIn = true
+                    }
                 }
             } label: {
+//                CorrectButton()
                 HStack {
-                    Text("Sign Up")
-                        .fontWeight(.semibold)
-                    Image(systemName: "arrow.right")
+                    if isLoading {
+                        ProgressView()
+                    }
+                    else {
+                        Text("Sign Up")
+                            .fontWeight(.semibold)
+                        Image(systemName: "arrow.right")
+                    }
                 }
                 .foregroundColor(.white)
                 .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                .navigationDestination(isPresented: $isSignedIn) {
+                   ProfileView()
+                }
             }
             .background(Color(.systemPurple))
+            
             //.disabled(formIsValid) //form validation
             //.opacity(formIsValid ? 1.0 : 0.5) //form validation
+            
             .cornerRadius(10)
             .padding(.top, 24)
 

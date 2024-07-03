@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14F72AB22C333B0800829FFF /* firspushprasiddha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F72AB12C333B0800829FFF /* firspushprasiddha.swift */; };
+		771A9B682C3453A70023FCA1 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771A9B672C3453A70023FCA1 /* ForgotPasswordView.swift */; };
+		771A9B6A2C34569A0023FCA1 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771A9B692C34569A0023FCA1 /* Splash.swift */; };
+		771A9B6C2C3463630023FCA1 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771A9B6B2C3463630023FCA1 /* Onboarding.swift */; };
+		771A9B6E2C347BE10023FCA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 771A9B6D2C347BE10023FCA1 /* GoogleService-Info.plist */; };
+		771A9B722C34EBB70023FCA1 /* button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771A9B712C34EBB70023FCA1 /* button.swift */; };
+		771A9B742C3506110023FCA1 /* Twirl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771A9B732C3506110023FCA1 /* Twirl.swift */; };
 		774A46912C333A2D00269908 /* yourForestRealApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46902C333A2D00269908 /* yourForestRealApp.swift */; };
 		774A46932C333A2D00269908 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46922C333A2D00269908 /* ContentView.swift */; };
 		774A46952C333A2E00269908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774A46942C333A2E00269908 /* Assets.xcassets */; };
 		774A46982C333A2E00269908 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774A46972C333A2E00269908 /* Preview Assets.xcassets */; };
-		774A469F2C333B8600269908 /* swiftSux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A469E2C333B8600269908 /* swiftSux.swift */; };
 		774A46A22C333E3600269908 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 774A46A12C333E3600269908 /* FirebaseAuth */; };
 		774A46A42C333E3600269908 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 774A46A32C333E3600269908 /* FirebaseFirestore */; };
 		774A46A62C333E3600269908 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 774A46A52C333E3600269908 /* FirebaseFirestoreSwift */; };
 		774A46A82C333E3600269908 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 774A46A72C333E3600269908 /* FirebaseStorage */; };
-		774A46AB2C333F3D00269908 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 774A46AA2C333F3D00269908 /* GoogleService-Info.plist */; };
 		774A46AD2C33402600269908 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46AC2C33402600269908 /* InputView.swift */; };
 		774A46AF2C33404700269908 /* AltLoginButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46AE2C33404700269908 /* AltLoginButtons.swift */; };
 		774A46BD2C33408000269908 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46B02C33408000269908 /* LoginView.swift */; };
@@ -28,19 +31,21 @@
 		774A46C22C33408000269908 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46BA2C33408000269908 /* HomeView.swift */; };
 		774A46C52C3340DE00269908 /* RememberMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46C32C3340DE00269908 /* RememberMeView.swift */; };
 		774A46C62C3340DE00269908 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46C42C3340DE00269908 /* SettingsRowView.swift */; };
-		774A46C82C33427300269908 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46C72C33427300269908 /* ForgotPasswordView.swift */; };
 		774A46CA2C3343F400269908 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A46C92C3343F400269908 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14F72AB12C333B0800829FFF /* firspushprasiddha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firspushprasiddha.swift; sourceTree = "<group>"; };
+		771A9B672C3453A70023FCA1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		771A9B692C34569A0023FCA1 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		771A9B6B2C3463630023FCA1 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		771A9B6D2C347BE10023FCA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		771A9B712C34EBB70023FCA1 /* button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = button.swift; sourceTree = "<group>"; };
+		771A9B732C3506110023FCA1 /* Twirl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twirl.swift; sourceTree = "<group>"; };
 		774A468D2C333A2D00269908 /* yourForestReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yourForestReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		774A46902C333A2D00269908 /* yourForestRealApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourForestRealApp.swift; sourceTree = "<group>"; };
 		774A46922C333A2D00269908 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		774A46942C333A2E00269908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		774A46972C333A2E00269908 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		774A469E2C333B8600269908 /* swiftSux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftSux.swift; sourceTree = "<group>"; };
-		774A46AA2C333F3D00269908 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		774A46AC2C33402600269908 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		774A46AE2C33404700269908 /* AltLoginButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltLoginButtons.swift; sourceTree = "<group>"; };
 		774A46B02C33408000269908 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -51,7 +56,6 @@
 		774A46BA2C33408000269908 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		774A46C32C3340DE00269908 /* RememberMeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RememberMeView.swift; sourceTree = "<group>"; };
 		774A46C42C3340DE00269908 /* SettingsRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
-		774A46C72C33427300269908 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		774A46C92C3343F400269908 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,18 +93,14 @@
 		774A468F2C333A2D00269908 /* yourForestReal */ = {
 			isa = PBXGroup;
 			children = (
-				774A46C92C3343F400269908 /* User.swift */,
-				774A46C72C33427300269908 /* ForgotPasswordView.swift */,
-				774A46C32C3340DE00269908 /* RememberMeView.swift */,
-				774A46C42C3340DE00269908 /* SettingsRowView.swift */,
+				771A9B6D2C347BE10023FCA1 /* GoogleService-Info.plist */,
 				774A46BC2C33408000269908 /* Core */,
 				774A46A92C333F2E00269908 /* Other */,
 				774A46902C333A2D00269908 /* yourForestRealApp.swift */,
+				771A9B6B2C3463630023FCA1 /* Onboarding.swift */,
 				774A46AC2C33402600269908 /* InputView.swift */,
 				774A46AE2C33404700269908 /* AltLoginButtons.swift */,
-				14F72AB12C333B0800829FFF /* firspushprasiddha.swift */,
 				774A46922C333A2D00269908 /* ContentView.swift */,
-				774A469E2C333B8600269908 /* swiftSux.swift */,
 				774A46942C333A2E00269908 /* Assets.xcassets */,
 				774A46962C333A2E00269908 /* Preview Content */,
 			);
@@ -118,7 +118,6 @@
 		774A46A92C333F2E00269908 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				774A46AA2C333F3D00269908 /* GoogleService-Info.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -128,6 +127,11 @@
 			children = (
 				774A46B02C33408000269908 /* LoginView.swift */,
 				774A46B12C33408000269908 /* RegistrationView.swift */,
+				771A9B712C34EBB70023FCA1 /* button.swift */,
+				771A9B732C3506110023FCA1 /* Twirl.swift */,
+				774A46C42C3340DE00269908 /* SettingsRowView.swift */,
+				774A46C32C3340DE00269908 /* RememberMeView.swift */,
+				771A9B672C3453A70023FCA1 /* ForgotPasswordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,7 +172,9 @@
 		774A46BB2C33408000269908 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				774A46C92C3343F400269908 /* User.swift */,
 				774A46BA2C33408000269908 /* HomeView.swift */,
+				771A9B692C34569A0023FCA1 /* Splash.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -253,7 +259,7 @@
 			files = (
 				774A46982C333A2E00269908 /* Preview Assets.xcassets in Resources */,
 				774A46952C333A2E00269908 /* Assets.xcassets in Resources */,
-				774A46AB2C333F3D00269908 /* GoogleService-Info.plist in Resources */,
+				771A9B6E2C347BE10023FCA1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,22 +270,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				771A9B6C2C3463630023FCA1 /* Onboarding.swift in Sources */,
 				774A46932C333A2D00269908 /* ContentView.swift in Sources */,
 				774A46BD2C33408000269908 /* LoginView.swift in Sources */,
+				771A9B682C3453A70023FCA1 /* ForgotPasswordView.swift in Sources */,
 				774A46C02C33408000269908 /* ProfileView.swift in Sources */,
 				774A46C52C3340DE00269908 /* RememberMeView.swift in Sources */,
 				774A46CA2C3343F400269908 /* User.swift in Sources */,
 				774A46AF2C33404700269908 /* AltLoginButtons.swift in Sources */,
-				14F72AB22C333B0800829FFF /* firspushprasiddha.swift in Sources */,
 				774A46C62C3340DE00269908 /* SettingsRowView.swift in Sources */,
 				774A46AD2C33402600269908 /* InputView.swift in Sources */,
-				774A469F2C333B8600269908 /* swiftSux.swift in Sources */,
 				774A46C12C33408000269908 /* MainView.swift in Sources */,
 				774A46912C333A2D00269908 /* yourForestRealApp.swift in Sources */,
+				771A9B742C3506110023FCA1 /* Twirl.swift in Sources */,
 				774A46C22C33408000269908 /* HomeView.swift in Sources */,
 				774A46BE2C33408000269908 /* RegistrationView.swift in Sources */,
-				774A46C82C33427300269908 /* ForgotPasswordView.swift in Sources */,
+				771A9B722C34EBB70023FCA1 /* button.swift in Sources */,
 				774A46BF2C33408000269908 /* AuthViewModel.swift in Sources */,
+				771A9B6A2C34569A0023FCA1 /* Splash.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
